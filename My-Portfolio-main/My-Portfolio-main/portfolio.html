@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+</head>
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    // Add event listeners to navigation links
+    const navLinks = document.querySelectorAll(".navbar a");
+    navLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const sectionId = link.getAttribute("onclick").split("'")[1];
+            scrollToSection(sectionId);
+        });
+    });
+
+    // Function to scroll to a section
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({
+                behavior: "smooth",
+            });
+        }
+    }
+});
+
+
+    </script>
+   <script>
+    function scrollToNextSection() {
+        const currentSection = document.querySelector('.btn-box');
+        if (currentSection) {
+            const currentSectionContainer = currentSection.closest('section');
+            if (currentSectionContainer) {
+                const nextSection = currentSectionContainer.nextElementSibling;
+                if (nextSection) {
+                    nextSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+    }
+</script>
+
+    
+    <header class="header">
+        <h1><a href="#" class="logo" onclick="scrollToSection('home')">Portfolio</a></h1>
+        <nav class="navbar">
+            <a href="#" style="--i:1" onclick="scrollToSection('home')">Home</a>
+            <a href="#" style="--i:2" onclick="scrollToSection('about')">About</a>
+            <a href="#" style="--i:3" onclick="scrollToSection('projects')">Projects</a>
+            <a href="#" style="--i:4" onclick="scrollToSection('skills')">Skills</a>
+            <a href="#" style="--i:5" onclick="scrollToSection('contact')">Contact</a>
+        </nav>
+    </header>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, Its me,<span class="text"></span></h3>
+            <h1>BODIRE SAI SHRUTHI</h1>
+            <p>I am currently pursuing 3rd year B.E under CSE department in Chaitanya           Bharathi Institute of Technology</p>
+            <div class="home-sci">
+                <a href="https://github.com/saishruthi2540" target="_blank" style="--i:6"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/sai-shruthi-bodire-2a575a27b/" target="_blank" style="--i:7"><i class='bx bxl-linkedin-square'></i></a>
+                <a href="https://wa.me/8179978731" target="_blank" style="--i:8"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+            <a href="javascript:void(0);" class="btn-box" onclick="scrollToNextSection()">More about me</a>
+
+        </div>
+        <!-- Image remains here -->
+        <img src="shruthi.jpeg" alt="Your Image" class="right-image" height="350">
+    </section>
+    
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="shruthi.jpeg" alt="">
+
+        </div>
+        <div class="about-text">
+            <h2>About <span>Me</span></h2>
+            <h4> Front End Web developer</h4>
+            <p>"I am a passionate front-end web developr with a strong drive for creativity and innovation. "I'm a Computer Science and Engineering graduate with a academic track record, including a CGPA of 9.49/10 during my studies at Chaitanya Bharathi Institute of Technology. Prior to that, I achieved a 99.2% score in my diploma kamala nehru polytechnic for women College. My academic journey has been marked by dedication and a drive for excellence. I'm passionate about technology and look forward to applying my skills to create innovative solutions." and am always excited to take on new challenges. Welcome to my portfolio, where you can explore a collection of my work and get to know me better."</p>
+             
+            <div class="resume-button">
+                <a href="C:/Users/HP/Desktop/Sai%20Shruthi_Resume(2024).pdf" download>
+                    Resume
+                </a>
+            </div> 
+
+
+
+        </div>
+    </section>
+    <section class="projects" id="projects">
+        <div class="section-header">
+            <h2>My Projects</h2>
+        </div><div>
+            
+        </div>
+        <div class="project">
+           
+            <h3>Railway Reservation System </h3>
+            <p>Description: This project is about Railway Reservation. It was implemented in C programming language. It includes features like Railway timings and payment tracking.</p>
+            
+        </div>
+    
+        <div class="project">
+            
+            <h3>Spammer detection </h3>
+            <p>Description:This project Identifies the spammer on the social websites.It detects the fake users.</p>
+           
+        </div>
+    
+       
+    
+        
+    </section>
+    
+
+    
+    <section class="skills" id="skills">
+       
+        <div class="skills-container">
+            <h1 class="sub-title"> My <span>Skills</span></h1>
+        <div class="container1" id="technical-skills">
+            <h1 class="heading1">Technical Skills</h1>
+            <div class="Technical-bars">
+                <div class="bar"><i style="color: #c95d2e;" class='bx bxl-html5'></i>
+                    <div class="info">
+                        <span>HTML</span>
+                    </div>
+                    <div class="progress-line html">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"> <i style="color: #147bbc;" class='bx bxl-css3' ></i>
+                    <div class="info">
+                        <span>CSS</span>
+                    </div>
+                    <div class="progress-line css">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i style="color: #b0bc1e;"class='bx bxl-javascript' ></i>
+                    <div class="info">
+                        <span>JS</span>
+                    </div>
+                    <div class="progress-line js">
+                        <span></span>
+                    </div>
+                </div>
+               
+                <div class="bar">
+                    <div class="info">
+                        <span>DATA STRUCTURES</span>
+                    </div>
+                    <div class="progress-line ds">
+                        <span></span>
+                    </div>
+                </div>
+                <div class="bar"><i style="color: red;"class='bx bxl-java' ></i>
+                    <div class="info">
+                        <span>JAVA</span>
+                    </div>
+                    <div class="progress-line java">
+                        <span></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container1" id="professional-skills">
+            <h1 class="heading1" >Professional Skills</h1>
+            <div class="radial-bars">
+             <div class="radial-bar">
+
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-1" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">80 %</div>
+                <div class="text">Time Management</div>
+
+             </div>
+             <div class="radial-bar">
+
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-2" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">70 %</div>
+                <div class="text">LeaderShip</div>
+
+             </div>
+             <div class="radial-bar">
+
+                <svg x="0px" y="0px" viewBox="0 0 200 200">
+                    <circle class="progress-bar" cx="100" cy="100" r="80"></circle>
+                    <circle class="path path-3" cx="100" cy="100" r="80"></circle>
+                </svg>
+                <div class="percentage">60%</div>
+                <div class="text">Problem-Solving</div>
+
+             </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h2>Contact Me</h2>
+            <p>If you have any questions or would like to work together, feel free to get in touch. You can reach me via email or through the social media links below:</p>
+    
+            <!-- Contact Form (optional) -->
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <a href="javascript:void(1);" class="btn-box" onclick="scrollToNextSection()">Back to Top</a>
+    
+            <!-- Social Media Links -->
+            <div class="social-links">
+                <a href="mailto:your@email.com" target="_blank"><i class="bx bx-mail-send"></i></a>
+                <a href="#" target="_blank"><i class="bx bxl-linkedin-square"></i></a>
+                <a href="#" target="_blank"><i class="bx bxl-twitter"></i></a>
+                <a href="#" target="_blank"><i class="bx bxl-github"></i></a>
+            </div>
+        </div>
+
+    </section>
+    
+    <script src="port.js"></script>
+</body>
+</html>

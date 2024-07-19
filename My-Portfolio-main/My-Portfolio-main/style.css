@@ -1,0 +1,769 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    color: #ededed;
+    background-color: rgb(156, 20, 168);
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+    background: rgb(156, 20, 168);
+    padding: 20px 10%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slidelight 1s ease forwards;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 30px;
+    transition: 0.3s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover {
+    color: whitesmoke;
+}
+
+.home {
+    position: relative;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    background: url(pur.jpeg) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    padding: 70px 10% 0;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 30px;
+    animation: slideTop 1s ease forwards;
+    animation-delay: .7s;
+}
+
+.home-content h3 span {
+    color: #0ef;
+}
+
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    animation: slidelight 1s ease forwards;
+    animation-delay: 1s;
+    /* Added animation delay */
+}
+
+.home-content p {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    animation: slideleft 1s ease forwards;
+    animation-delay: 1s;
+    /* Added animation delay */
+}
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+    font-size: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: .5s ease;
+    margin: 30px 15px 30px 0;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.home-sci a:hover {
+    background: whitesmoke;
+    color: #081b29;
+    box-shadow: 0 0 20px whitesmoke;
+}
+
+.btn-box {
+    display: inline-block;
+    padding: 12px 20px;
+    background: whitesmoke;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px whitesmoke, 0 0 25px whitesmoke;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px whitesmoke, 0 0 100px whitesmoke, 0 0 200px whitesmoke;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.about-img img {
+    margin-left: 20%;
+    padding-top: 10%;
+    padding-bottom: 20%;
+    max-width: 350px;
+    height: auto;
+    width: 75%;
+    border-radius: 0px 25px 25px 0px;
+}
+
+.about-text h2 {
+    font-size: 40px;
+}
+
+.about-text p {
+    margin-right: 25%;
+    color: whitesmoke;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+.about-text h2 span {
+    color: violet;
+}
+
+.about-text h4 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10%;
+}
+
+.home img.right-image {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    max-width: 30%;
+    /* Adjust the width as needed */
+    border-radius: 25px 25px 25px 25px;
+    /* If you want rounded corners, similar to the about section */
+    margin-bottom: 100%;
+}
+
+
+.container1 {
+    width: 600px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 120px;
+}
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+
+.Technical-bars {
+    margin-top: 40px;
+    align-items: center;
+}
+
+.Technical-bars .bar {
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 300%;
+    font-weight: 900;
+}
+
+.Technical-bars .bar .info {
+    margin-bottom: 15px;
+    margin-right: 20%;
+    line-height: 1.4rem;
+}
+
+.Technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.Technical-bars .bar .progress-line {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000000;
+    margin-right: 20%;
+    animation: animate 1s cubic-bezier(1, 0, 0, 1) forwards;
+    transform: scaleX(1);
+    transform-origin: right;
+}
+
+
+@keyframes animate {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.Technical-bars .bar .progress-line span {
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.progress-line.html span {
+    width: 90%;
+}
+
+.progress-line.css span {
+    width: 85%;
+}
+
+.progress-line.js span {
+    width: 60%;
+}
+
+.progress-line.python span {
+    width: 75%;
+}
+
+.progress-line.ds span {
+    width: 65%;
+}
+
+.progress-line.java span {
+    width: 75%;
+}
+
+.progress-line.css span::after {
+    content: "85%";
+    position: absolute;
+    right: 0;
+    top: -20px;
+    color: #000;
+    font-weight: 500;
+    opacity: 0;
+}
+
+.progress-line.js span::after {
+    content: "60%";
+    position: absolute;
+    right: 0;
+    top: -20px;
+    color: #000;
+    font-weight: 500;
+    opacity: 0;
+}
+
+.progress-line.python span::after {
+    content: "75%";
+    position: absolute;
+    right: 0;
+    top: -20px;
+    color: #000;
+    font-weight: 500;
+    opacity: 0;
+}
+
+.progress-line.ds span::after {
+    content: "65%";
+    position: absolute;
+    right: 0;
+    top: -20px;
+    color: #000;
+    font-weight: 500;
+    opacity: 0;
+}
+
+.progress-line.java span::after {
+    content: "50%";
+    position: absolute;
+    right: 0;
+    top: -20px;
+    color: #000;
+    font-weight: 500;
+    opacity: 0;
+}
+
+
+@keyframes showText {
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes slidelight {
+    0% {
+        opacity: 0;
+        transform: translate(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@keyframes slideleft {
+    0% {
+        opacity: 0;
+        transform: translate(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        opacity: 0;
+        transform: translate(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+
+@keyframes slideBottom {
+    0% {
+        opacity: 0;
+        transform: translate(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+
+}
+
+.radial-bars {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+}
+
+.radial-bars .radial-bar {
+    width: 50%;
+    height: 170px;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+
+.radial-bars .radial-bar svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    width: 120px;
+    height: 100px;
+
+}
+
+.radial-bars .radial-bar .progress-bar {
+    stroke-width: 10;
+    stop-color: black;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+    animation: animate-bar 1s linear forwards;
+}
+
+@keyframes animate-bar {
+    100% {
+        stroke-dashoffset: -1;
+    }
+}
+
+.path {
+    stroke-width: 10;
+    stroke: #0ef;
+    fill: transparent;
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+    stroke-linecap: round;
+}
+
+.path-1 {
+    animation: animate-path1 1s 1s linear forwards;
+}
+
+.path-2 {
+    animation: animate-path2 1s 1s linear forwards;
+}
+
+.path-3 {
+    animation: animate-path3 1s 1s linear forwards;
+}
+
+@keyframes animate-path1 {
+    100% {
+        stroke-dashoffset: 50;
+    }
+
+}
+
+@keyframes animate-path2 {
+    100% {
+        stroke-dashoffset: 175;
+    }
+
+}
+
+@keyframes animate-path3 {
+    100% {
+        stroke-dashoffset: 125;
+    }
+
+}
+
+.radial-bar .percentage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.radial-bar .text {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50px);
+    font-size: 17px;
+    font-weight: 500;
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+#professional-skills {
+    flex: 1;
+    margin-right: 10%;
+    align-items: center;
+    /* margin-right: 20%; */
+}
+
+.radial-bars {
+    margin-right: 40%;
+}
+
+
+.contact {
+
+    padding: 40px;
+    text-align: center;
+    margin-top: 10px;
+
+    margin-bottom: 20px;
+ 
+}
+
+.contact-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+.contact h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: whitesmoke;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+    font-size: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: .5s ease;
+
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.social-links a:hover {
+    background: whitesmoke;
+    color: #081b29;
+    box-shadow: 0 0 20px whitesmoke;
+}
+.resume-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.resume-button a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+    font-size: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: calc(0.2s * var(--i));
+}
+
+.resume-button a:hover {
+    background: whitesmoke;
+    color: #081b29;
+    box-shadow: 0 0 20px whitesmoke;
+}
+
+
+/* Style social icons as needed */
+/* CSS for image animation */
+/* Style for the project section */
+.projects {
+    padding: 20px 0;
+    background-color: rgb(156, 20, 168);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.section-header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack projects vertically */
+    align-items: center;
+    text-align: center;
+}
+
+.project {
+    background-color: rgb(156, 20, 168);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px whitesmoke, 0 0 25px whitesmoke;
+    padding: 10px;
+    margin: 20px;
+    max-width: 300px;
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project-image {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+}
+
+.project h3 {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.project p {
+    font-size: 1.1em;
+    color: black;
+    margin: 10px 0;
+}
+
+.project a {
+    display: block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px auto;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.project a:hover {
+    background-color: #0056b3;
+}
+
+.btn-box {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* CSS for image animation */
+.project-image {
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto 20px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    /* Add a transition for smooth scaling */
+
+}
+
+.project-image:hover {
+    transform: scale(1.1);
+    /* Scale the image by 10% on hover */
+}
+
+/* CSS for the sub-title */
+.skills .sub-title {
+    font-size: 2em;
+    /* Adjust the font size as needed */
+    text-align: center;
+
+}
+
+.sub-title span {
+    color: violet;
+    /* Change the color of the nested <span> */
+    font-weight: bold;
+    /* Add font-weight for emphasis */
+}
